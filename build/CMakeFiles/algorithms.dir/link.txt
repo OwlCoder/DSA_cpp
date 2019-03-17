@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libalgorithms.so -o libalgorithms.so CMakeFiles/algorithms.dir/src/Algorithms.cpp.o 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/utils.hpp
+iostream
+-
+vector
+-
+
+/home/namang/cpp_ws/src/coding practice/dsa/src/utils.cpp
+utils.hpp
+/home/namang/cpp_ws/src/coding practice/dsa/src/utils.hpp
+
