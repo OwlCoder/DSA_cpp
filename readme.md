@@ -1,4 +1,4 @@
-# Data Structures and Algorithms implemented in C++
+# C++ Library for Data Structures and Algorithms
 (work in progress, stay tuned)
 ## Algorithms:
 
