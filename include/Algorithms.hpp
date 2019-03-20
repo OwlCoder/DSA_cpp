@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -36,9 +37,11 @@ class SortVec
     private:
         FVector* array;
         int size_vec;
+        std::string pivot_pos;
 
     //private functions
     private:
+        int partition(int left_slider, int right_slider);
         
         
 };//end class sortvec
