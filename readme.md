@@ -8,8 +8,14 @@ quick sort: a divide and conquer algorithm. The worst case O(n2) occurs if pivot
             Average case: O(nlogn)
             in place sorting and cache friendly and therefore better than merge sort
             unstable by nature but can be modified to be stable
+
+
 merge sort: a divide and conquer algorithm. 
+
+
 insertion sort
+
+
 heap sort
 
 
@@ -26,7 +32,7 @@ Dijkstra
 
 ## Data Structures:
 
-Linked lists:
+Linked lists
 Singly linked lists
 doubly linked lists
 
