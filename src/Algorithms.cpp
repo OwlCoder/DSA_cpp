@@ -4,7 +4,7 @@
 #include <string>
 
 using namespace std;
-using namespace algortithms;
+using namespace algorithms;
 
 SortVec::SortVec(const SortVec::FVector& unsorted_vec):pivot_pos("end")
 {
@@ -37,7 +37,23 @@ void SortVec::quickSort(int left_slider, int right_slider)
 
 void SortVec::mergeSort(int left_slider, int right_slider)
 {
-    
+    if (left_slider>=right_slider)
+    {
+        return;
+    }
+    else
+    {
+
+    }
+
+    // find the middle point to divide the array into two halves
+    int mid=(left_slider+right_slider)/2;
+    // Call mergeSort for first half
+    SortVec::mergeSort(left_slider,mid);
+    // Call mergeSort for second half
+    SortVec::mergeSort(mid, right_slider);
+    // Merge the two halves sorted in step 2 and step 3
+    utils::mergeVec(left_slider, mid, right_slider);
 }
 //private functions
 
