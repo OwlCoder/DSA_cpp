@@ -35,6 +35,12 @@ void SortVec::quickSort(int left_slider, int right_slider)
     SortVec::quickSort(new_pivot_idx,right_slider);
 }
 
+void SortVec::mergeSort(int left_slider, int right_slider)
+{
+    
+}
+//private functions
+
 int SortVec::partition(int left_slider, int right_slider)
 {
     int new_pivot_idx;
@@ -90,3 +96,4 @@ int SortVec::partition(int left_slider, int right_slider)
     
     return new_pivot_idx;
 }
+

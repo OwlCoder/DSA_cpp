@@ -23,14 +23,20 @@ class SortVec
         ~SortVec();
 
         /*
-        quick sort: choose pivot element randomly
+        quick sort
         @param left_slider: points to the first element of the section of the unsorted array
         @param right_slider: points to the last element of the section of the unsorted array 
         @return sorted_vec: stored in array (pvt var) itself
         */
         void quickSort(int left_slider, int right_slider);
 
-        //merge sort
+        /*
+        merge sort
+        stable sorting algorithm
+        */
+        void mergeSort(int left_slider, int right_slider);
+
+        //insertion sort
         //heap sort
 
     //private variables
