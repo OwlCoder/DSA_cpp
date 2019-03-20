@@ -9,12 +9,9 @@ quick sort: a divide and conquer algorithm. The worst case O(n2) occurs if pivot
             in place sorting and cache friendly and therefore better than merge sort
             unstable by nature but can be modified to be stable
 
-
 merge sort: a divide and conquer algorithm. 
 
-
 insertion sort
-
 
 heap sort
 
@@ -22,17 +19,23 @@ heap sort
 ### Searching:
 
 Binary search
+
 Interpolation search
 
 ### Greedy algorithms:
 Kruskal minimum spanning tree
+
 Prim's 
+
 Dijkstra
 
 
 ## Data Structures:
 
 Linked lists
+
 Singly linked lists
+
 doubly linked lists
+
 
