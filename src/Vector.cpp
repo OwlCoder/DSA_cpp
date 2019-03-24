@@ -65,6 +65,36 @@ void Vector::mergeSort(int left_slider, int right_slider)
     // print after sorting
     utils::printVec<float>(*array);
 }
+
+void Vector::binarySearch(int left_idx, int right_idx, float search_query)
+{
+    if (right_idx<left_idx)
+    {
+        return;
+    }
+    else
+    {
+        int mid_idx=left_idx+(right_idx-left_idx)/2;
+        if ((*array)[mid_idx]==search_query)
+        {
+            cout<<"the sorted array is: \t";
+            utils::printVec<float>(*array);
+            cout<<"and the index (counting from 0) at which the number: "<<search_query<<" is located is = "<<mid_idx<<endl;
+            return;
+        }
+
+        if ((*array)[mid_idx]>search_query)
+        {
+            //look for it in the lower section
+            return Vector::binarySearch(left_idx, mid_idx-1, search_query);
+        }
+        else
+        {
+            return Vector::binarySearch(mid_idx+1,right_idx, search_query);
+        }
+    }
+    
+}
 //private functions
 
 int Vector::partition(int left_slider, int right_slider)

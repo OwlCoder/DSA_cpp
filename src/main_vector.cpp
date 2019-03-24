@@ -28,5 +28,10 @@ int main(int argc, char *argv[])
     vec_obj.mergeSort(0,input_vec.size()-1);
 
     cout<<"------TESTING OF ALL SEARCHING ALGORITHMS------"<<endl;
-    
+    //find the index in sorted vector
+    cout<<"-------BINARY SEARCH TEST 1------"<<endl;
+    vec_obj.binarySearch(0,input_vec.size()-1,70);
+    cout<<"-------BINARY SEARCH TEST 2------"<<endl;
+    vec_obj.binarySearch(0,input_vec.size()-1,90);
+
 }

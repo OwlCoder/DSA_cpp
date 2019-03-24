@@ -21,7 +21,7 @@ merge sort: a divide and conquer algorithm. Stable Sorting algorithm.
 
 ### Searching:
 
-Binary search
+Binary search: called binary because at every node you have two choices (binary choice)
 
 (use data structures like map (Hash tables) to do searching)
 
@@ -62,5 +62,7 @@ Merge Sort
 ## Priority Queue
 
 ## Heaps
+
+## Hash Tables (map)
 
 

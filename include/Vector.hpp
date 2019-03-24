@@ -50,9 +50,11 @@ class Vector
         //heap sort
 
         /*
-        binary search
+        binary search: Searches on a sorted array (index returned is of the sorted array)
+        (make sure sort is already called before calling this function)
+        // TO DO: find the index in the original vector
         */
-        void binarySearch();
+        void binarySearch(int left_slider, int right_slider, float search_query);
 
     //private variables
     private:
