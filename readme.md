@@ -8,34 +8,48 @@ quick sort: a divide and conquer algorithm. The worst case O(n2) occurs if pivot
             Average case: O(nlogn)
             in place sorting and cache friendly and therefore better than merge sort
             unstable by nature but can be modified to be stable
+            better for arrays
 
-merge sort: a divide and conquer algorithm. 
+merge sort: a divide and conquer algorithm. Stable Sorting algorithm. 
+            better for linked lists
 
-insertion sort
+//insertion sort
 
-heap sort
+//heap sort
 
 
 ### Searching:
 
 Binary search
 
-Interpolation search
+(use data structures like map (Hash tables) to do searching)
 
-### Greedy algorithms:
+(if possible, make a graph and use a graph search algorithm )
+
+### Graph algorithms:
 Kruskal minimum spanning tree
 
 Prim's 
 
+BFS
+
+DFS
+
 Dijkstra
 
+A*
+
+### Compression Algorithm:
+Huffman Coding
 
 ## Data Structures:
 
-Linked lists
-
 Singly linked lists
 
-doubly linked lists
+//doubly linked lists
+
+Priority Queue:
+
+Heaps:
 
 

@@ -27,10 +27,8 @@ namespace utils
         input_vec[idx2]=temp_var;
     }
 
-    //merge two vectors
-    template<typename T>
-    void mergeVec(vector<T>& vec1, vector<T>& vec2)
-    {
-        
-    }
+    //copy one vector to another vector based on start_idx and length
+    
+
+
 }//end ns utils
