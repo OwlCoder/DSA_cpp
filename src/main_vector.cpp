@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     //declaring an object of the class
     Vector vec_obj(input_vec);
 
-    // cout<<"------QUICK SORT TEST 1-------"<<endl;
+    cout<<"------QUICK SORT TEST 1-------"<<endl;
     vec_obj.initSortVec(input_vec);
     cout<<"input vector: \t ";
     printVec<float>(input_vec); 

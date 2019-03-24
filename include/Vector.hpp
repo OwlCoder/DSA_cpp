@@ -52,6 +52,7 @@ class Vector
         /*
         binary search
         */
+        void binarySearch();
 
     //private variables
     private:

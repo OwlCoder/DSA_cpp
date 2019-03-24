@@ -1,6 +1,7 @@
 # C++ Library for Data Structures and Algorithms
 (work in progress, stay tuned)
-## Algorithms:
+Uses STL wherever required/efficient
+## Vectors:
 
 ### Sorting:
 
@@ -26,11 +27,14 @@ Binary search
 
 (if possible, make a graph and use a graph search algorithm )
 
-### Graph algorithms:
+## Graphs
+
+### Minimum tree:
 Kruskal minimum spanning tree
 
 Prim's 
 
+### Graph Search:
 BFS
 
 DFS
@@ -39,17 +43,23 @@ Dijkstra
 
 A*
 
+## Strings
+
 ### Compression Algorithm:
 Huffman Coding
 
-## Data Structures:
+## Linked Lists:
 
 Singly linked lists
 
 //doubly linked lists
 
-Priority Queue:
+### Sort
 
-Heaps:
+### Search
+
+## Priority Queue:
+
+## Heaps:
 
 
