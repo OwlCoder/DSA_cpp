@@ -1,7 +1,7 @@
 # C++ Library for Data Structures and Algorithms
 (work in progress, stay tuned)
 Uses STL wherever required/efficient
-## Vectors:
+## Vectors
 
 ### Sorting:
 
@@ -48,18 +48,19 @@ A*
 ### Compression Algorithm:
 Huffman Coding
 
-## Linked Lists:
+## Linked Lists
 
 Singly linked lists
 
 //doubly linked lists
 
-### Sort
+### Sort:
+Merge Sort
 
 ### Search
 
-## Priority Queue:
+## Priority Queue
 
-## Heaps:
+## Heaps
 
 
