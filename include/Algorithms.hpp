@@ -18,11 +18,14 @@ class SortVec
     //public functions
     public:
         //constructor
-        SortVec(const FVector& unsorted_vec);
+        SortVec();
 
         //destructor: deleting anything on heap is necessary
         ~SortVec();
 
+        // initializing the vector with unsorted vector to call on another sorting method
+        void init(const FVector& unsorted_vec);
+        
         /*
         quick sort
         @param left_slider: points to the first element of the section of the unsorted array

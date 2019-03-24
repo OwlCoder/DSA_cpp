@@ -6,15 +6,20 @@
 using namespace std;
 using namespace algorithms;
 
-SortVec::SortVec(const SortVec::FVector& unsorted_vec):pivot_pos("end")
+SortVec::SortVec():pivot_pos("end")
 {
-    size_vec=unsorted_vec.size();
-    array=new FVector(unsorted_vec);
+
 }
 
 SortVec::~SortVec()
 {
     delete array;
+}
+
+void SortVec::init(const SortVec::FVector& unsorted_vec)
+{
+    size_vec=unsorted_vec.size();
+    array=new FVector(unsorted_vec);
 }
 
 void SortVec::quickSort(int left_slider, int right_slider)
