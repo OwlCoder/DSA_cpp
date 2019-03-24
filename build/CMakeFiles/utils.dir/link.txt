@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libutils.so -o libutils.so CMakeFiles/utils.dir/src/utils.cpp.o 

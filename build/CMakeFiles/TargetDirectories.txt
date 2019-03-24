@@ -2,7 +2,7 @@
 /home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/list_install_components.dir
 /home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/rebuild_cache.dir
 /home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/edit_cache.dir
-/home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/algorithms.dir
+/home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/vector.dir
 /home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/main.dir
 /home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/install/strip.dir
 /home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/install/local.dir

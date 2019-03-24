@@ -175,7 +175,7 @@ dsa_BINARY_DIR:STATIC=/home/namang/cpp_ws/src/coding practice/dsa/build
 dsa_SOURCE_DIR:STATIC=/home/namang/cpp_ws/src/coding practice/dsa
 
 //Dependencies for target
-utils_LIB_DEPENDS:STATIC=
+vector_LIB_DEPENDS:STATIC=
 
 
 ########################

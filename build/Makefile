@@ -155,17 +155,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named algorithms
+# Target rules for targets named vector
 
 # Build rule for target.
-algorithms: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 algorithms
-.PHONY : algorithms
+vector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vector
+.PHONY : vector
 
 # fast build rule for target.
-algorithms/fast:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/build
-.PHONY : algorithms/fast
+vector/fast:
+	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/build
+.PHONY : vector/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -180,59 +180,59 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/Algorithms.o: src/Algorithms.cpp.o
+src/Vector.o: src/Vector.cpp.o
 
-.PHONY : src/Algorithms.o
-
-# target to build an object file
-src/Algorithms.cpp.o:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/Algorithms.cpp.o
-.PHONY : src/Algorithms.cpp.o
-
-src/Algorithms.i: src/Algorithms.cpp.i
-
-.PHONY : src/Algorithms.i
-
-# target to preprocess a source file
-src/Algorithms.cpp.i:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/Algorithms.cpp.i
-.PHONY : src/Algorithms.cpp.i
-
-src/Algorithms.s: src/Algorithms.cpp.s
-
-.PHONY : src/Algorithms.s
-
-# target to generate assembly for a file
-src/Algorithms.cpp.s:
-	$(MAKE) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/src/Algorithms.cpp.s
-.PHONY : src/Algorithms.cpp.s
-
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
+.PHONY : src/Vector.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/Vector.cpp.o:
+	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/Vector.cpp.o
+.PHONY : src/Vector.cpp.o
 
-src/main.i: src/main.cpp.i
+src/Vector.i: src/Vector.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/Vector.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/Vector.cpp.i:
+	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/Vector.cpp.i
+.PHONY : src/Vector.cpp.i
 
-src/main.s: src/main.cpp.s
+src/Vector.s: src/Vector.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/Vector.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/Vector.cpp.s:
+	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/Vector.cpp.s
+.PHONY : src/Vector.cpp.s
+
+src/main_vector.o: src/main_vector.cpp.o
+
+.PHONY : src/main_vector.o
+
+# target to build an object file
+src/main_vector.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main_vector.cpp.o
+.PHONY : src/main_vector.cpp.o
+
+src/main_vector.i: src/main_vector.cpp.i
+
+.PHONY : src/main_vector.i
+
+# target to preprocess a source file
+src/main_vector.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main_vector.cpp.i
+.PHONY : src/main_vector.cpp.i
+
+src/main_vector.s: src/main_vector.cpp.s
+
+.PHONY : src/main_vector.s
+
+# target to generate assembly for a file
+src/main_vector.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main_vector.cpp.s
+.PHONY : src/main_vector.cpp.s
 
 # Help Target
 help:
@@ -244,16 +244,16 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... algorithms"
+	@echo "... vector"
 	@echo "... main"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... src/Algorithms.o"
-	@echo "... src/Algorithms.i"
-	@echo "... src/Algorithms.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/Vector.o"
+	@echo "... src/Vector.i"
+	@echo "... src/Vector.s"
+	@echo "... src/main_vector.o"
+	@echo "... src/main_vector.i"
+	@echo "... src/main_vector.s"
 .PHONY : help
 
 

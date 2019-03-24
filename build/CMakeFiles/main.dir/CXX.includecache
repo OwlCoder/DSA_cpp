@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/Algorithms.hpp
+../include/Vector.hpp
 iostream
 -
 vector
@@ -20,13 +20,13 @@ iostream
 vector
 -
 
-/home/namang/cpp_ws/src/coding practice/dsa/src/main.cpp
+/home/namang/cpp_ws/src/coding practice/dsa/src/main_vector.cpp
 iostream
 -
 vector
 -
-Algorithms.hpp
-/home/namang/cpp_ws/src/coding practice/dsa/src/Algorithms.hpp
+Vector.hpp
+/home/namang/cpp_ws/src/coding practice/dsa/src/Vector.hpp
 utils.hpp
 /home/namang/cpp_ws/src/coding practice/dsa/src/utils.hpp
 
