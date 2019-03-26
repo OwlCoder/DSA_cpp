@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,30 +155,70 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vector
+# Target rules for targets named dsa
 
 # Build rule for target.
-vector: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vector
-.PHONY : vector
+dsa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dsa
+.PHONY : dsa
 
 # fast build rule for target.
-vector/fast:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/build
-.PHONY : vector/fast
+dsa/fast:
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/build
+.PHONY : dsa/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named main_vector
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+main_vector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main_vector
+.PHONY : main_vector
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+main_vector/fast:
+	$(MAKE) -f CMakeFiles/main_vector.dir/build.make CMakeFiles/main_vector.dir/build
+.PHONY : main_vector/fast
+
+#=============================================================================
+# Target rules for targets named main_graph
+
+# Build rule for target.
+main_graph: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main_graph
+.PHONY : main_graph
+
+# fast build rule for target.
+main_graph/fast:
+	$(MAKE) -f CMakeFiles/main_graph.dir/build.make CMakeFiles/main_graph.dir/build
+.PHONY : main_graph/fast
+
+src/Graph.o: src/Graph.cpp.o
+
+.PHONY : src/Graph.o
+
+# target to build an object file
+src/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
+
+src/Graph.i: src/Graph.cpp.i
+
+.PHONY : src/Graph.i
+
+# target to preprocess a source file
+src/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
+
+src/Graph.s: src/Graph.cpp.s
+
+.PHONY : src/Graph.s
+
+# target to generate assembly for a file
+src/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
 
 src/Vector.o: src/Vector.cpp.o
 
@@ -186,7 +226,7 @@ src/Vector.o: src/Vector.cpp.o
 
 # target to build an object file
 src/Vector.cpp.o:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/Vector.cpp.o
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/Vector.cpp.o
 .PHONY : src/Vector.cpp.o
 
 src/Vector.i: src/Vector.cpp.i
@@ -195,7 +235,7 @@ src/Vector.i: src/Vector.cpp.i
 
 # target to preprocess a source file
 src/Vector.cpp.i:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/Vector.cpp.i
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/Vector.cpp.i
 .PHONY : src/Vector.cpp.i
 
 src/Vector.s: src/Vector.cpp.s
@@ -204,8 +244,35 @@ src/Vector.s: src/Vector.cpp.s
 
 # target to generate assembly for a file
 src/Vector.cpp.s:
-	$(MAKE) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/Vector.cpp.s
+	$(MAKE) -f CMakeFiles/dsa.dir/build.make CMakeFiles/dsa.dir/src/Vector.cpp.s
 .PHONY : src/Vector.cpp.s
+
+src/main_graph.o: src/main_graph.cpp.o
+
+.PHONY : src/main_graph.o
+
+# target to build an object file
+src/main_graph.cpp.o:
+	$(MAKE) -f CMakeFiles/main_graph.dir/build.make CMakeFiles/main_graph.dir/src/main_graph.cpp.o
+.PHONY : src/main_graph.cpp.o
+
+src/main_graph.i: src/main_graph.cpp.i
+
+.PHONY : src/main_graph.i
+
+# target to preprocess a source file
+src/main_graph.cpp.i:
+	$(MAKE) -f CMakeFiles/main_graph.dir/build.make CMakeFiles/main_graph.dir/src/main_graph.cpp.i
+.PHONY : src/main_graph.cpp.i
+
+src/main_graph.s: src/main_graph.cpp.s
+
+.PHONY : src/main_graph.s
+
+# target to generate assembly for a file
+src/main_graph.cpp.s:
+	$(MAKE) -f CMakeFiles/main_graph.dir/build.make CMakeFiles/main_graph.dir/src/main_graph.cpp.s
+.PHONY : src/main_graph.cpp.s
 
 src/main_vector.o: src/main_vector.cpp.o
 
@@ -213,7 +280,7 @@ src/main_vector.o: src/main_vector.cpp.o
 
 # target to build an object file
 src/main_vector.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main_vector.cpp.o
+	$(MAKE) -f CMakeFiles/main_vector.dir/build.make CMakeFiles/main_vector.dir/src/main_vector.cpp.o
 .PHONY : src/main_vector.cpp.o
 
 src/main_vector.i: src/main_vector.cpp.i
@@ -222,7 +289,7 @@ src/main_vector.i: src/main_vector.cpp.i
 
 # target to preprocess a source file
 src/main_vector.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main_vector.cpp.i
+	$(MAKE) -f CMakeFiles/main_vector.dir/build.make CMakeFiles/main_vector.dir/src/main_vector.cpp.i
 .PHONY : src/main_vector.cpp.i
 
 src/main_vector.s: src/main_vector.cpp.s
@@ -231,7 +298,7 @@ src/main_vector.s: src/main_vector.cpp.s
 
 # target to generate assembly for a file
 src/main_vector.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main_vector.cpp.s
+	$(MAKE) -f CMakeFiles/main_vector.dir/build.make CMakeFiles/main_vector.dir/src/main_vector.cpp.s
 .PHONY : src/main_vector.cpp.s
 
 # Help Target
@@ -243,14 +310,21 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... dsa"
 	@echo "... edit_cache"
-	@echo "... vector"
-	@echo "... main"
-	@echo "... install/strip"
+	@echo "... main_vector"
+	@echo "... main_graph"
 	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
 	@echo "... src/Vector.o"
 	@echo "... src/Vector.i"
 	@echo "... src/Vector.s"
+	@echo "... src/main_graph.o"
+	@echo "... src/main_graph.i"
+	@echo "... src/main_graph.s"
 	@echo "... src/main_vector.o"
 	@echo "... src/main_vector.i"
 	@echo "... src/main_vector.s"

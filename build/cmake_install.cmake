@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}/usr/lib/libvector.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/libvector.so")
+  if(EXISTS "$ENV{DESTDIR}/usr/lib/libdsa.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/libdsa.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/usr/lib/libvector.so"
+         FILE "$ENV{DESTDIR}/usr/lib/libdsa.so"
          RPATH "")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/lib/libvector.so")
+   "/usr/lib/libdsa.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/lib" TYPE SHARED_LIBRARY FILES "/home/namang/cpp_ws/src/coding practice/dsa/build/libvector.so")
-  if(EXISTS "$ENV{DESTDIR}/usr/lib/libvector.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/libvector.so")
+file(INSTALL DESTINATION "/usr/lib" TYPE SHARED_LIBRARY FILES "/home/namang/cpp_ws/src/coding practice/dsa/build/libdsa.so")
+  if(EXISTS "$ENV{DESTDIR}/usr/lib/libdsa.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/lib/libdsa.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/lib/libvector.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/lib/libdsa.so")
     endif()
   endif()
 endif()
