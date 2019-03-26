@@ -24,10 +24,26 @@ merge sort: a divide and conquer algorithm. Stable Sorting algorithm.
 Binary search: called binary because at every node you have two choices (binary choice)
 
 (use data structures like map (Hash tables) to do searching)
-
 (if possible, make a graph and use a graph search algorithm )
 
 ## Graphs
+
+Undirected Graphs: undirected are basically directed graphs with two arrows in the opposite directions for each connection
+weighted and unweighted graphs (assume all are weighted, if unweighted assume 1 or 0 as all weights)
+
+Hence, weighted directed graphs are implemented for now.
+
+Directed Graphs
+
+all trees are also directed graphs but with no cycle:
+
+n-ary trees
+binary search tree
+Binary Heap: Min Heap/Max Heap
+
+### check if a graph is actually a tree (check for cycles):
+
+### Graph Insertion:
 
 ### Minimum tree:
 Kruskal minimum spanning tree
@@ -35,9 +51,9 @@ Kruskal minimum spanning tree
 Prim's 
 
 ### Graph Search:
-BFS
+BFS: Uses queue
 
-DFS
+DFS: Uses stack data structure
 
 Dijkstra
 
@@ -58,10 +74,6 @@ Singly linked lists
 Merge Sort
 
 ### Search
-
-## Priority Queue
-
-## Heaps
 
 ## Hash Tables (map)
 

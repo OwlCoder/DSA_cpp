@@ -93,7 +93,6 @@ void Vector::binarySearch(int left_idx, int right_idx, float search_query)
             return Vector::binarySearch(mid_idx+1,right_idx, search_query);
         }
     }
-    
 }
 //private functions
 
