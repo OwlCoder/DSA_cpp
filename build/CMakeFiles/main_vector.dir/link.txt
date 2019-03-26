@@ -1,1 +1,1 @@
-/usr/bin/c++   -O3 -DNDEBUG   CMakeFiles/main_vector.dir/src/main_vector.cpp.o  -o main_vector libdsa.so -Wl,-rpath,"/home/namang/cpp_ws/src/coding practice/dsa/build" 
+/usr/bin/c++   -g   CMakeFiles/main_vector.dir/src/main_vector.cpp.o  -o main_vector libdsa.so -Wl,-rpath,"/home/namang/cpp_ws/src/coding practice/dsa/build" 
