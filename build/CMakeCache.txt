@@ -171,11 +171,14 @@ algorithms_LIB_DEPENDS:STATIC=
 //Value Computed by CMake
 dsa_BINARY_DIR:STATIC=/home/namang/cpp_ws/src/coding practice/dsa/build
 
+//Dependencies for target
+dsa_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 dsa_SOURCE_DIR:STATIC=/home/namang/cpp_ws/src/coding practice/dsa
 
 //Dependencies for target
-utils_LIB_DEPENDS:STATIC=
+vector_LIB_DEPENDS:STATIC=
 
 
 ########################

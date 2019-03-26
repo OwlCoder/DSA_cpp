@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Graph.hpp
+iostream
+-
+vector
+-
+string
+-
+stack
+-
+queue
+-
+
+../include/utils.hpp
+iostream
+-
+vector
+-
+
+/home/namang/cpp_ws/src/coding practice/dsa/src/main_graph.cpp
+iostream
+-
+Graph.hpp
+/home/namang/cpp_ws/src/coding practice/dsa/src/Graph.hpp
+utils.hpp
+/home/namang/cpp_ws/src/coding practice/dsa/src/utils.hpp
+

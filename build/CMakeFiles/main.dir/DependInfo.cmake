@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/namang/cpp_ws/src/coding practice/dsa/src/main.cpp" "/home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/main.dir/src/main.cpp.o"
+  "/home/namang/cpp_ws/src/coding practice/dsa/src/main_vector.cpp" "/home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/main.dir/src/main_vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/algorithms.dir/DependInfo.cmake"
+  "/home/namang/cpp_ws/src/coding practice/dsa/build/CMakeFiles/vector.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

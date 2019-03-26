@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libdsa.so -o libdsa.so CMakeFiles/dsa.dir/src/Vector.cpp.o CMakeFiles/dsa.dir/src/Graph.cpp.o 

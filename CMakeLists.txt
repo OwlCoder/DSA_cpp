@@ -8,22 +8,19 @@ include_directories(include)
 
 #Can manually add the sources using the set command as follows:
 set(SOURCES
-	src/Algorithms.cpp
+	src/Vector.cpp
+	src/Graph.cpp
 )
 
-# set(UTILS
-	
-# )
 #Generate the SHARED library from the sources
-add_library(algorithms SHARED ${SOURCES})
-# add_library(utils SHARED ${UTILS})
+add_library(dsa SHARED ${SOURCES})
 
-# target_link_libraries(algorithms utils)
+add_executable(main_vector src/main_vector.cpp)
+add_executable(main_graph src/main_graph.cpp)
 
-add_executable(main src/main.cpp)
+target_link_libraries(main_vector dsa)
+target_link_libraries(main_graph dsa)
 
-target_link_libraries(main algorithms)
 #Set the location for library installation -- i.e., /usr/lib in this case
 # not really necessary in this example. Use "sudo make install" to apply
-install(TARGETS algorithms DESTINATION /usr/lib)
-# install(TARGETS utils DESTINATION /usr/lib)
+install(TARGETS dsa DESTINATION /usr/lib)
