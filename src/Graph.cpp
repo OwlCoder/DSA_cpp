@@ -44,6 +44,7 @@ int DirectedGraph_adjM::getIndex(Vertex* vertex)
         {
             return vert_idx;
         }
+        vert_idx++;
     }
     return -1; //ideally never
 }
@@ -93,7 +94,14 @@ bool DirectedGraph_adjM::isFull()
 
 void DirectedGraph_adjM::printGraph()
 {
-    
+    for (int from_iter=0; from_iter<num_vertices; ++from_iter)
+    {
+        for(int to_iter=0; to_iter<num_vertices; ++to_iter)
+        {
+            if(getWeight(from_iter,to_iter)!=0)
+                cout<<vertices[from_iter]->title<<"->"<<vertices[to_iter]->title<<endl;
+        }
+    }
 }
 
 
