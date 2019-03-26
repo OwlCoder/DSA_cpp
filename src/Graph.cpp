@@ -13,12 +13,6 @@ DirectedGraph_adjM::DirectedGraph_adjM(int size)
     num_vertices=0;
     max_vertices=size;
 
-    vertices.resize(size);
-    for (int push_iter=0; push_iter<size;++push_iter)
-    {
-        vertices[push_iter]=NULL;
-    }
-
     marks.resize(size);
 
     int rows=size;
@@ -35,12 +29,12 @@ DirectedGraph_adjM::~DirectedGraph_adjM()
     }
 }
 
-int DirectedGraph_adjM::getIndex(Vertex* vertex)
+int DirectedGraph_adjM::getIndex(const Vertex& vertex)
 {
     int vert_idx=0;
     while(vert_idx<num_vertices)
     {
-        if(vertices[vert_idx]==vertex)
+        if(vertices[vert_idx]==&vertex)
         {
             return vert_idx;
         }
@@ -51,14 +45,14 @@ int DirectedGraph_adjM::getIndex(Vertex* vertex)
 
 int DirectedGraph_adjM::getWeight(int from_vertex, int to_vertex)
 {
-    int row=getIndex(vertices[from_vertex]);
-    int col=getIndex(vertices[to_vertex]);
+    int row=getIndex(*vertices[from_vertex]);
+    int col=getIndex(*vertices[to_vertex]);
     return edges[row][col];
 }
 
-void DirectedGraph_adjM::addVertex(Vertex* vertex)
+void DirectedGraph_adjM::addVertex(Vertex& vertex)
 {
-    vertices[num_vertices]=vertex;
+    vertices.push_back(&vertex);
     for(int matrix_iter=0;matrix_iter<max_vertices;++matrix_iter)
     {
         edges[num_vertices][matrix_iter]=0;
@@ -69,8 +63,8 @@ void DirectedGraph_adjM::addVertex(Vertex* vertex)
 
 void DirectedGraph_adjM::addEdge(int from_vertex, int to_vertex, int weight)
 {
-    int row=getIndex(vertices[from_vertex]);
-    int col=getIndex(vertices[to_vertex]);
+    int row=getIndex(*vertices[from_vertex]);
+    int col=getIndex(*vertices[to_vertex]);
     edges[row][col]=weight;
 }
 
@@ -94,15 +88,87 @@ bool DirectedGraph_adjM::isFull()
 
 void DirectedGraph_adjM::printGraph()
 {
+    cout<<"printing the graph constructed:  ";
     for (int from_iter=0; from_iter<num_vertices; ++from_iter)
     {
         for(int to_iter=0; to_iter<num_vertices; ++to_iter)
         {
             if(getWeight(from_iter,to_iter)!=0)
-                cout<<vertices[from_iter]->title<<"->"<<vertices[to_iter]->title<<endl;
+                cout<<vertices[from_iter]->title<<"->"<<vertices[to_iter]->title<<", ";
+        }
+    }
+    cout<<endl;
+}
+
+void DirectedGraph_adjM::BFS(Vertex& vertex)
+{
+    //set all marks to false
+    for (int marks_iter=0; marks_iter<num_vertices; ++marks_iter)
+        marks[marks_iter]=false;
+    // FIFO structure
+    queue<Vertex*> q;
+    int curr_idx= getIndex(vertex);
+    // mark it as visited
+    marks[curr_idx]=true;
+    q.push(&vertex);
+    cout<<"BFS: ";
+    while (!q.empty())
+    {
+        Vertex* curr_node= q.front();
+        q.pop();
+        curr_idx=getIndex(*curr_node);
+        cout << curr_node->title << " ";
+        // get all adjacent vertices of the curr_vertex
+        for (int adj_iter=0; adj_iter<num_vertices; ++adj_iter)
+        {
+            int adj_idx=getIndex(*vertices[adj_iter]);
+            if(edges[curr_idx][adj_idx]!=0)
+            {
+                if(marks[adj_iter]==false)
+                {
+                    marks[adj_iter]=true;
+                    q.push(vertices[adj_iter]);
+                }
+            }
+        }
+    }
+    cout<<endl;
+}
+
+void DirectedGraph_adjM::DFSUtil(Vertex* vertex)
+{
+    if (vertex==NULL)
+        return;
+
+    cout<<vertex->title<<" ";
+    int curr_idx, adj_idx;
+    curr_idx=getIndex(*vertex);
+    marks[curr_idx]=true;
+
+    for (int adj_iter=0; adj_iter<num_vertices; ++adj_iter)
+    {
+        adj_idx=getIndex(*vertices[adj_iter]);
+        if (edges[curr_idx][adj_idx]!=0)
+        {
+            if(marks[adj_idx]==false)
+            {
+                DFSUtil(vertices[adj_idx]);
+            }
         }
     }
 }
 
+void DirectedGraph_adjM::DFS(Vertex& vertex)
+{
+    //set all marks to false
+    for (int marks_iter=0; marks_iter<num_vertices; ++marks_iter)
+        marks[marks_iter]=false;
+    cout<<"DFS: ";
+    
+    DFSUtil(&vertex);
+
+    cout<<endl;
+
+}
 
 

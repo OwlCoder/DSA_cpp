@@ -37,7 +37,7 @@ namespace DSA
             ~DirectedGraph_adjM();
             
             // add a vertex to the adjacency matrix
-            void addVertex(Vertex* vertex);
+            void addVertex(Vertex& vertex);
             // add weight to the adjacency matrix at (from_vertex, to_vertex)
             void addEdge(int from_vertex, int to_vertex, int weight);            
             
@@ -49,12 +49,12 @@ namespace DSA
             /*
             Breadth first Search: Use queue
             */
-		    void BFS(Vertex* vertex);
+		    void BFS(Vertex& vertex);
 
             /*
             Depth First Search
             */
-		   	void DFS(Vertex* vertex);
+		   	void DFS(Vertex& vertex);
 
 
         //private variables
@@ -70,13 +70,15 @@ namespace DSA
         private:
 
             // get index of the vertex from the adjacency matrix 
-            int getIndex(Vertex* vertex);
+            int getIndex(const Vertex& vertex);
             // get weight of the vertex from the adjacency matrix
             int getWeight(int from_vertex, int to_vertex);
             // check if we have added all the vertices to the adjacency matrix
             bool isFull();
             // check if the adjacency matrix has no vertices
             bool isEmpty();
+            // recursive function call for DFS, input could be null as DFS is called recursively
+            void DFSUtil(Vertex* vertex);
 
     };
 

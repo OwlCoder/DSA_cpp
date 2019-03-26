@@ -51,7 +51,7 @@ Kruskal minimum spanning tree
 Prim's 
 
 ### Graph Search:
-BFS: Uses queue
+BFS: Uses queue. Note that the above code traverses only the vertices reachable from a given source vertex. All the vertices may not be reachable from a given vertex (example Disconnected graph). To print all the vertices, we can modify the BFS function to do traversal starting from all nodes one by one. Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges in the graph.
 
 DFS: Uses stack data structure
 
