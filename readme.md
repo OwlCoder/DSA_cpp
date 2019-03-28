@@ -33,12 +33,12 @@ weighted and unweighted graphs (assume all are weighted, if unweighted assume 1 
 
 Hence, weighted directed graphs are implemented for now.
 
-Directed Graphs
+Directed Graphs: both using adjacency matrix and adjacency list
 
 all trees are also directed graphs but with no cycle:
 
-n-ary trees
-binary search tree
+//n-ary trees
+//binary search tree
 Binary Heap: Min Heap/Max Heap
 
 ### check if a graph is actually a tree (check for cycles):
@@ -53,7 +53,8 @@ Prim's
 ### Graph Search:
 BFS: Uses queue. Note that the above code traverses only the vertices reachable from a given source vertex. All the vertices may not be reachable from a given vertex (example Disconnected graph). To print all the vertices, we can modify the BFS function to do traversal starting from all nodes one by one. Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges in the graph.
 
-DFS: Uses stack data structure
+DFS: Uses stack data structure, Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges in the graph. 
+My implementation does recursively and hence doesn't need to use stack. TO DO: implement iterative DFS using stack (quite easy)
 
 Dijkstra
 
