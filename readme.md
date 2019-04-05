@@ -1,6 +1,7 @@
 # C++ Library for Data Structures and Algorithms
 (work in progress, stay tuned)
 Uses STL wherever required/efficient
+TO DO: make a class DSA and use polymorphism for rest of the data structures and have few basic virtual functions  (insertion, search, deletion)-- needs more thought
 ## Vectors
 
 ### Sorting:
